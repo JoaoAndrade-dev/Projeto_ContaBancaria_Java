@@ -1,17 +1,25 @@
 package conta;
 
 import conta.util.Cores;
+import conta.model.Conta;
 import java.util.Scanner;
 
 public class Menu {
 
 	public static void main(String[] args) {
+		
+		Conta c1 = new Conta(1, 123, 1, "Adriana", 10000.0f);
+		c1.visualizar();
+		c1.sacar(12000.0f);
+		c1.visualizar();
+		c1.depositar(5000.0f);
+		c1.visualizar();
 
 		Scanner sc = new Scanner(System.in);
 		int opcao;
 
 		while (true) {
-			System.out.println(Cores.TEXT_CYAN_BOLD + Cores.ANSI_WHITE_BACKGROUND +
+			System.out.println(Cores.TEXT_BLACK_BOLD + Cores.ANSI_WHITE_BACKGROUND +
 					           "*********************************************");
 			System.out.println("                                             ");
 			System.out.println("               Banco BugBank                 ");
@@ -42,39 +50,39 @@ public class Menu {
 
 			switch (opcao) {
 			case 1:
-				System.out.println(Cores.TEXT_CYAN_BOLD+ "Criar Conta\n\n");
+				System.out.println(Cores.TEXT_BLACK_BOLD+ "Criar Conta\n\n");
 
 				break;
 			case 2:
-				System.out.println(Cores.TEXT_CYAN_BOLD +"Listar todas as Contas\n\n");
+				System.out.println(Cores.TEXT_BLACK_BOLD +"Listar todas as Contas\n\n");
 
 				break;
 			case 3:
-				System.out.println(Cores.TEXT_CYAN_BOLD +"Consultar dados da Conta - por número\n\n");
+				System.out.println(Cores.TEXT_BLACK_BOLD +"Consultar dados da Conta - por número\n\n");
 
 				break;
 			case 4:
-				System.out.println(Cores.TEXT_CYAN_BOLD +"Atualizar dados da Conta\n\n");
+				System.out.println(Cores.TEXT_BLACK_BOLD +"Atualizar dados da Conta\n\n");
 
 				break;
 			case 5:
-				System.out.println(Cores.TEXT_CYAN_BOLD + "Apagar a Conta\n\n");
+				System.out.println(Cores.TEXT_BLACK_BOLD + "Apagar a Conta\n\n");
 
 				break;
 			case 6:
-				System.out.println(Cores.TEXT_CYAN_BOLD + "Saque\n\n");
+				System.out.println(Cores.TEXT_BLACK_BOLD + "Saque\n\n");
 
 				break;
 			case 7:
-				System.out.println(Cores.TEXT_CYAN_BOLD +"Depósito\n\n");
+				System.out.println(Cores.TEXT_BLACK_BOLD +"Depósito\n\n");
 
 				break;
 			case 8:
-				System.out.println(Cores.TEXT_CYAN_BOLD + "Transferência entre Contas\n\n");
+				System.out.println(Cores.TEXT_BLACK_BOLD + "Transferência entre Contas\n\n");
 
 				break;
 			default:
-				System.out.println(Cores.TEXT_RED_BOLD + "\nOpção Inválida!\n");
+				System.out.println(Cores.TEXT_BLACK_BOLD + "\nOpção Inválida!\n");
 				break;
 			}
 		}
