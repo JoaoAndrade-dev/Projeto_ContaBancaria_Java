@@ -75,7 +75,7 @@ public class Conta {
 
 	public void visualizar() {
 
-		String tipo = "";
+		String tipo = ""; 
 
 		switch (this.tipo) {
 		case 1:
